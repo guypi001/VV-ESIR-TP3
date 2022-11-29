@@ -14,4 +14,8 @@ Discuss the test smell you found with the help of PMD and propose here an improv
 Include the improved test code in this file.
 
 ## Answer
+In the proposal document we can see some PMD rules designed to cath test smells.
+Some of them have been seen in class:
 
+            - Uselles assert: The rule JUnitContainTooManyAsert .
+            
