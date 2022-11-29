@@ -18,4 +18,7 @@ In the proposal document we can see some PMD rules designed to cath test smells.
 Some of them have been seen in class:
 
             - Uselless assert: The rule JUnitContainTooManyAserts .
+            - Happy Path: UnnecessaryBooleanAssertion .
+            - Flaky Test: 
+
             
