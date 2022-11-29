@@ -17,5 +17,5 @@ Include the improved test code in this file.
 In the proposal document we can see some PMD rules designed to cath test smells.
 Some of them have been seen in class:
 
-            - Uselles assert: The rule JUnitContainTooManyAsert .
+            - Uselless assert: The rule JUnitContainTooManyAserts .
             
