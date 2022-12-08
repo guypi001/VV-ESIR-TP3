@@ -12,39 +12,39 @@ Answer the following questions:
 
 ## Answer
 
-1. Le résultat de 3* .4 contient beaucoup de nombres décimaux 1.2000000000000002  la machine éffectue les opérations en se basant sur 
+1.Le résultat de 3* .4 contient beaucoup de nombres décimaux 1.2000000000000002  la machine éffectue les opérations en se basant sur 
 		
-2. assertEquals affirme que deux objets sont égaux
-   assertSame affirme que deux objets font référence au même objet
+2.
+ - assertEquals affirme que deux objets sont égaux
+ 
+ - assertSame affirme que deux objets font référence au même objet
 
 assertEquals utilise la méthode equals()  pour comparer les objets, tandis que assertSame utilise l'opérateur == pour les comparer. Ainsi, la différence est exactement la même qu'entre == (comparer par valeur) et égal (comparer l'identité).
 		
-3. Le cas d'utilisation habituel est de l'appeler lorsqu'aucune exception n'a été levée dans un test négatif. 
+3.Le cas d'utilisation habituel est de l'appeler lorsqu'aucune exception n'a été levée dans un test négatif. 
 		
-			try{
-	   			bizMethod(badData);
-	   			fail(); // FAIL quand l'exception n'est pas levée
-			} catch (BizException e) {
-	   			assert(e.errorCode == THE_ERROR_CODE_U_R_LOOKING_FOR)
-			}
-		
-		
+	try{
+	   	bizMethod(badData);
+	   	fail(); // FAIL quand l'exception n'est pas levée
+	} catch (BizException e) {
+	   	assert(e.errorCode == THE_ERROR_CODE_U_R_LOOKING_FOR)
+	}
+			
 Un autre cas d'utilisation, lorsque quelque chose aurait mal tourné dans ma méthode @Before.
 			
-			public Object obj;
+		public Object obj;
 
-			@Before
-			public void setUp() {
-			    // il s'agit de notre setup
-			    obj = new Object();
-			}
-
-			@Test
-			public void testObjectManipulation() {
-			    if(obj == null) {
+		@Before
+		public void setUp() {
+			// il s'agit de notre setup
+			obj = new Object();
+		}
+		@Test
+		public void testObjectManipulation() {
+			if(obj == null) {
 				fail("Ne doit pas être null");
-			     }
 			}
+		}
 			
 Dans les paramètres simultanés et/ou asynchrones, vous voudrez peut-être vérifier que certaines méthodes (par exemple les délégués, les écouteurs d'événements, les gestionnaires de réponse, etc.) ne sont pas appelées. Mis à part les cadres moqueurs, vous pouvez appeler fail()dans ces méthodes pour échouer aux tests. Les délais d'attente expirés sont une autre condition de défaillance naturelle dans de tels scénarios.
 Par exemple:
